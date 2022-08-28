@@ -1,0 +1,9 @@
+version: '3'
+services:
+  php8-app:
+    image: php:8.1-alpine
+    container_name: php
+    ports:
+      - 80:80
+    command: >
+      sh -c "ls && php -S 0.0.0.0:80"
