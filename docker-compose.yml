@@ -3,7 +3,12 @@ services:
   php8-app:
     image: php:8.1-alpine
     container_name: php
+    volumes:
+      - ./mounts/settings/php/etc:/usr/local/etc
+      - ./app:/app
     environment:
       - PHP_INI_DIR=/usr/local/etc/php
     ports:
       - 80:80
+    working_dir: /app
+    command: php -S 0.0.0.0:80
