@@ -1,1 +1,1 @@
-# docker_environment_PHP_8.1_alpine_and_mysql_8.0_with_PDO_driver
+# docker_environment_PHP_8.1_alpine_default_yaml
