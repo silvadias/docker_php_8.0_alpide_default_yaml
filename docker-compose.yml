@@ -5,7 +5,10 @@ services:
     container_name: php
     volumes:
       - ./mounts/settings/php/etc:/usr/local/etc
+      - ./app:/app
     environment:
       - PHP_INI_DIR=/usr/local/etc/php
+    working_dir: /app
     ports:
       - 80:80
+    command: php -S 0.0.0.0:80
